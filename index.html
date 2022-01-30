@@ -5,13 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script defer src="script.js"></script>
+  <script defer src="script2.js"></script>
   <style>
     body {
       margin: 0;
       width: 100vw;
       height: 100vh;
       overflow: hidden;
+      cursor: none;
     }
     #evil-button {
       position: absolute;
@@ -21,9 +22,30 @@
       white-space: nowrap;
       font-size: 1.5em;
     }
+    #cursor {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      border: 2px solid rgba(0, 0, 0, 0.377);
+      border-radius: 50%;
+      transition-duration: .08s;
+      transition-property: transform;
+    }
+    #cursor-point{
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.726);
+      z-index: 10;
+      transition-duration: .01s;
+      transition-property: transform;
+    }
   </style>
 </head>
 <body>
-  <button id="evil-button">You will never catch me</button>
+  <div id="cursor"></div>
+  <div id="cursor-point"></div>
+  <!-- <button id="evil-button">You will never catch me</button> -->
 </body>
 </html>
